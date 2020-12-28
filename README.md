@@ -1,6 +1,6 @@
 ## Online Resume
 
-https://mhaseebtariq.com/
+https://mhaseebtariq.com/ <br/>
 Generated (and hosted) using:
 * Github Pages
 * Django
