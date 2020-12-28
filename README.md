@@ -7,7 +7,8 @@ Generated (and hosted) using:
 * Template credit: https://themes.jsonresume.org/theme/kwan
 
 ### Setup
-* Python 3.9.1
+* Install Python 3.9.1
+* Install pip
 * `pip install virtualenv==20.2.2`
 * `git clone https://github.com/mhaseebtariq/mhaseebtariq.github.io.git`
 * `cd mhaseebtariq.github.io`
