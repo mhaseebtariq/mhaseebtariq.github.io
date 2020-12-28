@@ -1,4 +1,4 @@
-## Online Resume
+## Online Résumé
 
 <a href="https://mhaseebtariq.com/" target="_blank">Resume URL</a><br/><br/>
 Generated (and hosted) using:
