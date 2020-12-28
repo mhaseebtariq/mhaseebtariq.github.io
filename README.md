@@ -8,5 +8,11 @@ Generated (and hosted) using:
 
 ### Setup
 * Python 3.9.1
+* `pip install virtualenv==20.2.2`
+* `git clone https://github.com/mhaseebtariq/mhaseebtariq.github.io.git`
+* `cd mhaseebtariq.github.io`
 * `virtualenv .`
+* `source bin/activate`
 * `pip install -r requirements.txt`
+* `cd resume`
+* `python manage.py runserver`
