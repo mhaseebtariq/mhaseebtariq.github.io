@@ -1,6 +1,6 @@
 ## Online Resume
 
-<a href="https://mhaseebtariq.com/" target="_blank">Website URL</a><br/><br/>
+<a href="https://mhaseebtariq.com/" target="_blank">Resume URL</a><br/><br/>
 Generated (and hosted) using:
 * Github Pages
 * Django
