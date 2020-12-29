@@ -19,12 +19,13 @@ Generated (and hosted) using:
 * `python manage.py runserver`
 * Modify `templates/*.html` templates accordingly
 * Access http://127.0.0.1:8000/
-* View `source` from the browser
-* Copy the `source` to `index.html`
+* Run `python manage.py runscript export_pages` to update all the `*.html` files residing in the project root
 
 ### Deploy and Serve
 * Fork the repository as `<your-github-username>.github.io`
-* Modify `index.html` and see the changes live on `https://<your-github-username>.github.io`
+* Modify `templates/*.html` templates accordingly
+* `python manage.py runscript export_pages`
+* See the changes live on `https://<your-github-username>.github.io`
 
 ### TODO
 * Use a structured JSON file as the backend for the content

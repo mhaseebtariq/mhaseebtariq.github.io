@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'builder',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 APPEND_SLASH = False
+
+RUNSCRIPT_SCRIPT_DIR = 'jobs'

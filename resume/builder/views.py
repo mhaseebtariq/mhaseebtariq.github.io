@@ -13,13 +13,17 @@ def home_offline(request):
     return render(request, 'home.html', {'offline': True})
 
 
+def details_raven(request):
+    return render(request, 'details_raven.html', {'offline': False})
+
+
 def download(request):
     # `pip install django-weasyprint==1.0.2`
     # `brew install pango@1.48.0`
     # Add 'weasyprint' to INSTALLED_APPS (in settings.py)
     from weasyprint import HTML
 
-    rendered = render_to_string('home.html', {})
+    rendered = render_to_string('home.html', {'offline': True})
     html = HTML(string=rendered, base_url=request.build_absolute_uri())
     result = html.write_pdf(presentational_hints=True, zoom=1)
 

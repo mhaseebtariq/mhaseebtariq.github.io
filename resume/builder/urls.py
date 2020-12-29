@@ -17,12 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
 
-from builder.views import home, home_offline, download
+from builder.views import home, home_offline, details_raven, download
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r"^$", home),
     url(r"^offline.html$", home_offline),
+    url(r"^details_raven.html$", details_raven),
     url(r"^download$", download),
 ]
