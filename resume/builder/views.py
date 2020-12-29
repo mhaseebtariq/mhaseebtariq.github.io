@@ -17,7 +17,7 @@ def download(request):
 
     rendered = render_to_string('home.html', {})
     html = HTML(string=rendered, base_url=request.build_absolute_uri())
-    result = html.write_pdf(presentational_hints=True, zoom=0.5)
+    result = html.write_pdf(presentational_hints=True, zoom=1)
 
     # Creating http response
     response = HttpResponse(content_type='application/pdf;')
