@@ -126,7 +126,7 @@ body {
   line-height: 2.5;
 }
 .social-link {
-  display: block;
+  display: initial;
 }
 .social-link span {
   display: inline-block;
@@ -295,7 +295,7 @@ body {
 .background-card h4 {
   font-variant: small-caps;
   color: #777777;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #999999;
   padding-bottom: 1em;
   margin-bottom: 1em;
   line-height: 1.2;
@@ -330,7 +330,7 @@ h4 > .fa {
   content: ", ";
 }
 .enumeration:last-child:after {
-  content: ".";
+  content: "";
 }
 @media only screen and (max-width: 768px) {
   .profile-card {
@@ -440,7 +440,11 @@ h4 > .fa {
                   <img class="media-object img-circle center-block"  data-src="holder.js/100x100"
                     alt="Muhammad Haseeb Tariq"
                     src="https://avatars2.githubusercontent.com/u/17565233?s=460&u=22ce63543ff57c8041d1f74607759777a91f0228&v=4"
-                    itemprop="image">
+                    itemprop="image"
+
+                       onclick="window.open('offline.html', '_self');"
+
+                  >
                 </div>
                 <div class="contact-details">
                   <div class="name-and-profession">
@@ -485,18 +489,22 @@ h4 > .fa {
             <hr>
 
             <div class="social-links">
-                <a class="social-link" href="https://nl.linkedin.com/in/muhammad-haseeb-tariq-3b817260" target="_blank">
+                <a class="social-link"
+                   href="https://nl.linkedin.com/in/muhammad-haseeb-tariq-3b817260" target="_blank">
                   <span class="fa fa-linkedin fa-2x"></span>
-                  <span class="social-link-text">https://nl.linkedin.com/in/muhammad-haseeb-tariq-3b817260</span>
+
                 </a>
-                <a class="social-link" href="https://github.com/mhaseebtariq" target="_blank">
+                <a class="social-link"
+                   href="https://github.com/mhaseebtariq" target="_blank">
                   <span class="fa fa-github fa-2x"></span>
-                  <span class="social-link-text">https://github.com/mhaseebtariq</span>
+
                 </a>
+
                 <a class="social-link" href="https://github.com/mhaseebtariq/mhaseebtariq.github.io/raw/main/CV-MHT.pdf" target="_blank">
                   <span class="fa fa-download fa-2x"></span>
-                  <span class="social-link-text">Download as PDF</span>
+                  <span class="social-link-text">Download CV</span>
                 </a>
+
             </div>
           </div>
 
@@ -558,7 +566,20 @@ h4 > .fa {
               <div class="content has-sidebar">
                 <p class="clear-margin-sm">
                   <strong>MSc in Advanced Computer Science (Data Science)</strong>,&nbsp;
-                  University of Manchester
+                  University of Manchester, UK
+                </p>
+                <p class="text-muted">
+                  <small>
+                    Jun 2015 -  Jan 2017
+                  </small>
+                </p>
+              </div>
+            </li>
+            <li class="card-nested">
+              <div class="content has-sidebar">
+                <p class="clear-margin-sm">
+                  <strong>BSc (Hons) in Computer Science</strong>,&nbsp;
+                  NCBA&E Lahore, Pakistan
                 </p>
                 <p class="text-muted">
                   <small>
@@ -581,16 +602,19 @@ h4 > .fa {
                   <span class="label label-keyword">Cricket</span>
               </div>
             </li>
+            <li class="card-nested">
+              <p>
+                <strong>Cooking</strong>
+              </p>
+            </li>
         </ul>
 
         <h4 id="languages"><span class="fa fa-lg fa-language"></span> <span class="title">Languages</span> </h4>
         <p class="card-nested">
-           <span class="enumeration">
-              <strong>English, </strong>
-              <strong>Urdu, </strong>
-              <strong>Punjabi, </strong>
-              <strong>Dutch (A2)</strong>
-            </span>
+           <span class="enumeration"><strong>English</strong></span>
+           <span class="enumeration"><strong>Urdu</strong></span>
+           <span class="enumeration"><strong>Punjabi</strong></span>
+           <span class="enumeration"><strong>Dutch</strong> (A2 Level)</span>
         </p>
 
       </div>

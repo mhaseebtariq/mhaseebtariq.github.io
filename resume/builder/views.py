@@ -6,7 +6,11 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return render(request, 'home.html', {})
+    return render(request, 'home.html', {'offline': False})
+
+
+def home_offline(request):
+    return render(request, 'home.html', {'offline': True})
 
 
 def download(request):
