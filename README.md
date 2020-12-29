@@ -29,6 +29,4 @@ Generated (and hosted) using:
 
 ### TODO
 * Use a structured JSON file as the backend for the content
-* Write scripts to:
-    * Automatically generate the index.html and other static files and pages
-    * Generate the `pdf` format of the resume
+* Write scripts to generate the `pdf` format of the resume
