@@ -491,6 +491,19 @@ h4 > .fa {
             <hr>
 
             <div class="social-links">
+               {% if offline %}
+                <a class="social-link" style="display: inherit !important;" href="https://mhaseebtariq.com" target="_blank">
+                  <span class="fa fa-globe fa-2x"></span>
+                  <span class="social-link-text">https://mhaseebtariq.com</span>
+                </a>
+               {% endif %}
+               <a class="social-link" {% if offline %}style="display: inherit !important;"{% endif %}
+                   href="https://github.com/mhaseebtariq" target="_blank">
+                  <span class="fa fa-github fa-2x"></span>
+                  {% if offline %}
+                  <span class="social-link-text">https://github.com/mhaseebtariq</span>
+                  {% endif %}
+                </a>
                 <a class="social-link" {% if offline %}style="display: inherit !important;"{% endif %}
                    href="https://nl.linkedin.com/in/muhammad-haseeb-tariq-3b817260" target="_blank">
                   <span class="fa fa-linkedin fa-2x"></span>
@@ -498,23 +511,10 @@ h4 > .fa {
                   <span class="social-link-text">https://nl.linkedin.com/in/muhammad-haseeb-tariq-3b817260</span>
                   {% endif %}
                 </a>
-                <a class="social-link" {% if offline %}style="display: inherit !important;"{% endif %}
-                   href="https://github.com/mhaseebtariq" target="_blank">
-                  <span class="fa fa-github fa-2x"></span>
-                  {% if offline %}
-                  <span class="social-link-text">https://github.com/mhaseebtariq</span>
-                  {% endif %}
-                </a>
                {% if not offline %}
                 <a class="social-link" href="https://github.com/mhaseebtariq/mhaseebtariq.github.io/raw/main/CV-MHT.pdf" target="_blank">
                   <span class="fa fa-download fa-2x"></span>
                   <span class="social-link-text">Download CV</span>
-                </a>
-               {% else %}
-                <a class="social-link" {% if offline %}style="display: inherit !important;"{% endif %}
-                   href="https://mhaseebtariq.com" target="_blank">
-                  <span class="fa fa-globe fa-2x"></span>
-                  <span class="social-link-text">https://mhaseebtariq.com</span>
                 </a>
                {% endif %}
             </div>
