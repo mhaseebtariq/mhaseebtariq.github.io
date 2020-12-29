@@ -13,8 +13,8 @@ def home_offline(request):
     return render(request, 'home.html', {'offline': True})
 
 
-def details_raven(request):
-    return render(request, 'details_raven.html', {'offline': False})
+def details(request, template):
+    return render(request, f'{template}.html', {'offline': False})
 
 
 def download(request):
