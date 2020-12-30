@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,500,600,700|Open+Sans:400,500,600,700' rel='stylesheet' type='text/css'>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
     <style>
       .clear-margin {
   margin: 0;
@@ -624,8 +631,9 @@ h4 > .fa {
     <div class="card-wrapper">
       <div class="card" style="border: none !important; padding: none !important;">
           <a href="/"><h4 id="home-page"><span class="fa fa-home"></span><span class="title">Home</span></h4></a>
-          <a href="#" onclick="history.go(-1);">
+          <a href="#" onclick="goBack()">
             <h4 id="back-page"><span class="fa fa-backward"></span><span class="title">Back</span></h4>
+          </a>
           </a>
       </div>
     </div>
