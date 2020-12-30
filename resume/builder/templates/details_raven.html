@@ -1,10 +1,46 @@
 {% extends "base_details.html" %}
 
 {% block challenges %}
-  It's a very unique demand forecasting problem.
-  BrandLoyalty runs programs in several different regions of the world ... [TODO]
+
+  It's a very unique demand forecasting problem. Following are some of the aspects of the problem:
+  <ul>
+    <li>BrandLoyalty runs loyalty programs in several different regions of the world</li>
+    <li>Each country/region has different drivers for the demand</li>
+    <li>The demand drivers could be based on a variety of things:
+      <ul>
+        <li>The cultural dimensions</li>
+        <li>Socioeconomic factors</li>
+        <li>Weather</li>
+        <li>Retailer's type, size, and reach</li>
+      </ul>
+    </li>
+    <li>A huge number of different program dynamics</li>
+    <li>Every (important) combination of predictors has a very few data points</li>
+    <li>Even the entire data set is not big enough for any model to learn much</li>
+    <li>Some of the past programs had noisy data because of unforeseen events</li>
+  </ul>
+
 {% endblock %}
 
 {% block solution %}
-  [TODO]
+
+  Because of the complexity of the problem, we had to start with a complex (/flexible) model. Realising that for a small
+  percentage of programs we have noisy data, we started with "random forest". Even though the accuracy was better than a
+  simple linear or a tree based model, the predictions were not very stable.
+  <br><br>
+  We then moved on to a "Boosting" based model, Xgboost. The accuracy on the train set was consistently higher than the
+  random forest model. On the other hand, it was overfitting a lot - the accuracy on the the unseen data was very low.
+  In the subsequent iterations we tried "early stopping" by separating a small set of "evaluation set" from the train set.
+  This resulted in the accuracy of the model tightly tied to the quality and relevance of the evaluation set. There also didn't seem
+  to be a "consistently" smart way of selecting the evaluation set.
+  <br><br>
+  In the next iteration we repeated the training of the Xgboost model by randomly sampling (with replacement) the evaluation sets.
+  For the most recent version, we trained the model 10,000 times. By aggregating (mean) the predictions we got consistently stable predictions.
+  The overall accuracy was also much higher then all the previous versions. An added advantage of this method is that now, we can
+  also report the predictions intervals by calculating the 5th and 95th percentiles of the 10,000 predictions.
+  <br><br>
+  The actual implementation is much more complex than this explanation. This description only provides the most important parts
+  of the model design.
+
+
 {% endblock %}
