@@ -35,7 +35,7 @@
   to be a "consistently" smart way of selecting the evaluation set.
   <br><br>
   In the next iteration we repeated the training of the Xgboost model by randomly sampling (with replacement) the evaluation sets.
-  For the most recent version, we trained the model 10,000 times. By aggregating (mean) the predictions we got consistently stable predictions.
+  For the most recent version, we trained the model 10,000 times. By aggregating (mean) the predictions we got consistently stable results.
   The overall accuracy was also much higher then all the previous versions. An added advantage of this method is that now, we can
   also report the predictions intervals by calculating the 5th and 95th percentiles of the 10,000 predictions.
   <br><br>
