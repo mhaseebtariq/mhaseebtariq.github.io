@@ -16,7 +16,8 @@ function goBack() {
 </script>
 
     <style>
-      .clear-margin {
+
+.clear-margin {
   margin: 0;
 }
 .space-top {
@@ -642,13 +643,65 @@ h4 > .fa {
         <h4 id="challenges"><span class="fa fa-flag-checkered"></span><span class="title">Challenges</span> </h4>
         <div class="card-nested" itemprop="description">
           <p>
-  [TODO]
+
+  At Coolblue, several departments are dealing with several different kinds of timeseries data:
+  <ul>
+    <li>Number of shipments per day</li>
+    <li>Number of invoices per day</li>
+    <li>Number of customer service calls per day</li>
+    <li>Number of returns per day</li>
+    <li>Number of sales per item per day</li>
+    <li>… and more</li>
+  </ul>
+
+  For different use cases, the decision makers want the forecasts with different granularities and different time span:
+  <ul>
+    <li>Weekly number of shipments for the next year</li>
+    <li>Daily shipments for the next 2 weeks</li>
+    <li>Number of sales per item for the next day</li>
+    <li>… and more</li>
+  </ul>
+
+  Modeling even a single timeseries "manually" could be a very time consuming task. With every passing day the trends and patterns in each
+  timeseries are also changing. To top that, every timeseries is also different in terms of:
+  <ul>
+    <li>Volatility</li>
+    <li>Stationarity</li>
+    <li>Magnitude, and</li>
+    <li>Noise</li>
+  </ul>
+
+  It is, therefore, infeasible to hire several hundred analysts to perform (readily available)
+  forecasts every day. Automating the:
+  <ul>
+    <li>Training of the models</li>
+    <li>Validation of the models, in terms of:
+      <ul>
+        <li>Accuracy</li>
+        <li>Stability</li>
+        <li>Reliability</li>
+        <li>Robustness</li>
+      </ul>
+    </li>
+    <li>Serving the forecast</li>
+    <li>Controlling, and</li>
+    <li>Monitoring the outputs</li>
+  </ul>
+  Therefore, becomes a huge challenge. Not only in terms of design complexity, but time and space complexities as well.
+
 </p>
         </div>
         <h4 id="solution"><span class="fa fa-exclamation-circle"></span><span class="title">Solution</span> </h4>
         <div class="card-nested" itemprop="description">
           <p>
-  [TODO]
+
+  We came up with idea of GFM, keeping these requirements in mind. A fully-automated "generalized" forecasting machine,
+  that is able to perform robust scientific/statistical analyses and tasks <b>at scale</b>.
+  <br><br>
+  The challenge with the time complexity was solved by utilizing distributed computing on Spark. The design complexity
+  and the topic of validating models at scale require a lot of explanation. Happy to share those details in a conversation &#128522
+
+
 </p>
         </div>
       </div>

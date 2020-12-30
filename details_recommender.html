@@ -16,7 +16,8 @@ function goBack() {
 </script>
 
     <style>
-      .clear-margin {
+
+.clear-margin {
   margin: 0;
 }
 .space-top {
@@ -642,13 +643,72 @@ h4 > .fa {
         <h4 id="challenges"><span class="fa fa-flag-checkered"></span><span class="title">Challenges</span> </h4>
         <div class="card-nested" itemprop="description">
           <p>
-  [TODO]
+
+  The majority of the consumer base of Coolblue is not tech-savvy. Therefore, sometimes what happens is - a person comes
+  to the website; starts exploring a product (group) she is interested in; and eventually loses interest in the search because she
+  is unable to find something that she might be willing to buy.
+
 </p>
         </div>
         <h4 id="solution"><span class="fa fa-exclamation-circle"></span><span class="title">Solution</span> </h4>
         <div class="card-nested" itemprop="description">
           <p>
-  [TODO]
+
+  We came up with this idea to train a model, that is able to learn the recurring sequences of page visits from the (more) tech-savvy
+  people on Coolblue. If the model is able to learn those sequences, we can then guide the less informed (about certain products)
+  people more effectively. This would help some people find (and buy) the products they are looking for, more easily.
+  <br><br>
+  The model is trained on a Long short-term memory (LSTM) architecture of recurrent neural network (RNN). The code was implemented in
+  Tensorflow (compiled with GPU support). The data processing, transformation, and encoding were sped up using Dask and h5py.
+  <br><br>
+  <b>Brief explanation of the design:</b>
+  <br><br>
+  Suppose a customer visits the following (n=) 7 product pages:
+  <pre><code>customer_id, sequence
+1, [A, B, C, D, E, F, G]</code></pre>
+
+  This sequence is transformed into:
+  <pre><code>X(customer_id, sequence), Y
+(1, [A]), B
+(1, [A, B]), C
+(1, [A, B, C]), D
+(1, [A, B, C, D]), E
+(1, [A, B, C, D, E]), F
+(1, [A, B, C, D, E, F]), G</code></pre>
+
+  And finally:
+  <pre><code>X(customer_id, sequence), Y
+Observation 1
+X,                      Y
+[0, 0, 0, 0, 0, 0, 0]   B
+[0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0]
+[A, 0, 0, 0, 0, 0, 0]
+
+Observation 2
+X,                      Y
+[0, 0, 0, 0, 0, 0, 0]   C
+[0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0]
+[A, B, 0, 0, 0, 0, 0]
+
+…
+
+Observation 6 (n-1)
+X,                       Y
+[0, 0, 0, 0, 0, 0, 0]    G
+[A, B, C, D, 0, 0, 0]
+[B, C, D, E, 0, 0, 0]
+[C, D, E, F, 0, 0, 0]</code></pre>
+
+
+  Note that:
+  <ul>
+    <li>A, B, C, … are represented as 1's, and match the specific position of the alphabet in the 1-hot encoded vector</li>
+    <li>Within a vector we have no sense of time</li>
+    <li>The sense of time is given from the 4 different windows depicting four different time steps (window length is set to 4)</li>
+  </ul>
+
 </p>
         </div>
       </div>
