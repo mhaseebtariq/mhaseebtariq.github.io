@@ -17,16 +17,16 @@ Generated (and hosted) using:
 * `pip install -r requirements.txt`
 * `cd resume`
 * `python manage.py runserver`
-* Modify `templates/*.html` templates accordingly
+* Modify the content in the `templates/*.html` files accordingly
 * Access http://127.0.0.1:8000/
 * Run `python manage.py runscript export_pages` to update all the `*.html` files residing in the project root
 
 ### Deploy and Serve
 * Fork the repository as `<your-github-username>.github.io`
-* Modify `templates/*.html` templates accordingly
+* Modify `templates/*.html` files accordingly
 * `python manage.py runscript export_pages`
 * See the changes live on `https://<your-github-username>.github.io`
 
 ### TODO
 * Use a structured JSON file as the backend for the content
-* Write scripts to generate the `pdf` format of the resume
+* Write script to generate the `pdf` format of the resume
