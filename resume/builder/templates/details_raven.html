@@ -27,21 +27,20 @@
 
   Because of the complexity of the problem, we had to start with a complex (/flexible) model. Realising that for a small
   percentage of programs we have noisy data, we started with "random forest". Even though the accuracy was better than a
-  simple linear or a tree based model, the predictions were not very stable.
+  simple linear or a tree (based) model, the predictions were not very stable.
   <br><br>
   We then moved on to a "Boosting" based model, Xgboost. The accuracy on the train set was consistently higher than the
-  random forest model. On the other hand, it was overfitting a lot - the accuracy on the the unseen data was very low.
-  In the subsequent iterations we tried "early stopping" by separating a small set of "evaluation set" from the train set.
+  random forest model. On the other hand, it was overfitting a lot &#8212; the accuracy on the the unseen data was very low.
+  In the subsequent iterations we tried "early stopping", by separating a small set of "evaluation set" from the train set.
   This resulted in the accuracy of the model tightly tied to the quality and relevance of the evaluation set. There also didn't seem
   to be a "consistently" smart way of selecting the evaluation set.
   <br><br>
   In the next iteration we repeated the training of the Xgboost model by randomly sampling (with replacement) the evaluation sets.
   For the most recent version, we trained the model 10,000 times. By aggregating (mean) the predictions we got consistently stable results.
-  The overall accuracy was also much higher then all the previous versions. An added advantage of this method is that now, we can
+  The overall accuracy was also much higher then all the previous versions. An added advantage of this method is that, now we can
   also report the predictions intervals by calculating the 5th and 95th percentiles of the 10,000 predictions.
   <br><br>
-  The actual implementation is much more complex than this explanation. This description only provides the most important parts
-  of the model design.
-
+  The actual implementation is much more complex than this explanation. This description only provides the overview of some of
+  the interesting design decisions.
 
 {% endblock %}
