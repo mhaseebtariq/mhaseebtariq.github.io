@@ -5,17 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Muhammad Haseeb Tariq</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,500,600,700|Open+Sans:400,500,600,700' rel='stylesheet' type='text/css'>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
 
 <script>
+
 function goBack() {
   window.history.back();
 }
+
+window.onload = function() {
+    tippy('.tippy', {
+       placement: 'bottom',
+       arrow: false,
+       offset: [-15, 10],
+    });
+};
+
 </script>
 
-    <style>
+<style>
 
 .clear-margin {
   margin: 0;
@@ -540,7 +552,9 @@ h4 > .fa {
   content: "\e60a";
 }
 
-    </style>
+</style>
+
+
   </head>
 
   <body itemscope itemtype="http://schema.org/Person">
@@ -551,18 +565,17 @@ h4 > .fa {
           <div class="card">
             <div class="profile-card">
                 <div class="profile-pic">
-                  <img class="media-object img-circle center-block"  data-src="holder.js/100x100"
+                  <img class="media-object img-circle center-block" data-src="holder.js/100x100"
                     alt="Muhammad Haseeb Tariq"
+                    style="cursor: pointer !important;"
                     src="https://avatars2.githubusercontent.com/u/17565233?s=460&u=22ce63543ff57c8041d1f74607759777a91f0228&v=4"
-                    itemprop="image"
-                       
-                       onclick="window.open('offline.html', '_self');"
-                       
-                  >
+                    itemprop="image" onclick="window.open('/', '_self');">
                 </div>
                 <div class="contact-details">
                   <div class="name-and-profession">
-                    <h3 class="text-bolder name" itemprop="name">Muhammad Haseeb Tariq</h3>
+                    <h3 class="text-bolder name" itemprop="name"
+                        style="cursor: pointer !important;"
+                        onclick="window.open('/', '_self');">Muhammad Haseeb Tariq</h3>
                     <h5 class="text-muted" itemprop="jobTitle">Data Scientist</h5>
                   </div>
 
@@ -606,18 +619,23 @@ h4 > .fa {
                
                <a class="social-link" 
                    href="https://github.com/mhaseebtariq" target="_blank">
-                  <span class="fa fa-github fa-2x"></span>
+                  <span class="tippy fa fa-github fa-2x" data-tippy-content="Github"></span>
                   
                 </a>
                 <a class="social-link" 
                    href="https://nl.linkedin.com/in/muhammad-haseeb-tariq-3b817260" target="_blank">
-                  <span class="fa fa-linkedin fa-2x"></span>
+                  <span class="tippy fa fa-linkedin fa-2x" data-tippy-content="LinkedIn"></span>
                   
                 </a>
                
+                <a class="social-link" href="/" target="_blank">
+                  <span class="tippy fa fa-home fa-2x" data-tippy-content="Home"></span>
+                </a>
+                <a class="social-link" href="offline.html" target="_blank">
+                  <span class="tippy fa fa-print fa-2x" data-tippy-content="Print Version"></span>
+                </a>
                 <a class="social-link" href="CV-MHT.pdf">
-                  <span class="fa fa-download fa-2x" style="width: 1.1em !important;"></span>
-                  <span class="social-link-text" style="margin-right: 2px !important;">Download CV</span>
+                  <span class="tippy fa fa-file-pdf-o fa-2x" data-tippy-content="Download PDF"></span>
                 </a>
                
             </div>
@@ -630,8 +648,7 @@ h4 > .fa {
           
 
     <div class="card-wrapper">
-      <div class="card" style="border: none !important; padding: none !important;">
-          <a href="/"><h4 id="home-page"><span class="fa fa-home"></span><span class="title">Home</span></h4></a>
+      <div class="card" style="border: none !important; padding: none !important; padding: 0.5em 3.5em !important;">
           <a onclick="goBack()" role="button" style="cursor: pointer;">
             <h4 id="back-page"><span class="fa fa-backward"></span><span class="title">Back</span></h4>
           </a>
