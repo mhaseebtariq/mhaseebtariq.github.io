@@ -23,7 +23,7 @@ Generated (and hosted) using:
 
 ### Deploy and Serve
 * Fork the repository as `<your-github-username>.github.io`
-* Modify `templates/*.html` files accordingly
+* Modify the `templates/*.html` files accordingly
 * `python manage.py runscript export_pages`
 * See the changes live on `https://<your-github-username>.github.io`
 
