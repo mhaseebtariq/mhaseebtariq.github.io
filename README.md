@@ -20,11 +20,13 @@ Generated (and hosted) using:
 * Modify the content in the `templates/*.html` files accordingly
 * Access http://127.0.0.1:8000/
 * Run `python manage.py runscript export_pages` to update all the `*.html` files residing in the project root
+  - See: resume/builder/jobs/export_pages.py
 
 ### Deploy and Serve
 * Fork the repository as `<your-github-username>.github.io`
 * Modify the `templates/*.html` files accordingly
 * `python manage.py runscript export_pages`
+  - See: resume/builder/jobs/export_pages.py
 * See the changes live on `https://<your-github-username>.github.io`
 
 ### TODO
