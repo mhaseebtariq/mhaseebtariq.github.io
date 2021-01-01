@@ -31,4 +31,4 @@ Generated (and hosted) using:
 
 ### TODO
 * Use a structured JSON file as the backend for the content
-* Write script to generate the `pdf` format of the resume
+* Write a script to generate the `pdf` format of the resume
