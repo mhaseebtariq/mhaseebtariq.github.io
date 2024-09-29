@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Muhammad Haseeb Tariq</title>
-    <link rel='shortcut icon' type='image/x-icon' href='https://raw.githubusercontent.com/mhaseebtariq/mhaseebtariq.github.io/main/favicon.ico' />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/mhaseebtariq/mhaseebtariq.github.io/main/favicon.ico" />
+    <link rel="stylesheet" href="https://www.mhaseebtariq.com/fa-all.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,500,600,700|Open+Sans:400,500,600,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,500,600,700|Open+Sans:400,500,600,700" rel="stylesheet" type="text/css">
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
 
@@ -114,6 +114,9 @@ body {
     padding: 5px 0;
   }
 }
+.t-details {
+  margin-left: 10px;
+}
 .profile-card {
   display: table;
   width: 100%;
@@ -144,7 +147,6 @@ body {
 }
 .social-links {
   line-height: 2.5;
-  margin-left: -18px;
 }
 .social-links-offline {
   line-height: 2.5;
@@ -156,12 +158,14 @@ body {
 .social-link span {
   display: inline-block;
   vertical-align: middle;
+  margin-bottom: 20px;
+  margin-right: 20px;
 }
 .social-link:hover,
 .social-link:focus {
   text-decoration: none;
 }
-.social-link .fa {
+.social-link .fa .fa-brands .fa-solid {
   width: 2em;
 }
 .social-link-offline {
@@ -171,7 +175,7 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
-.social-link-offline .fa {
+.social-link-offline .fa .fa-brands .fa-solid {
   margin-right: 13px;
 }
 
@@ -186,12 +190,12 @@ body {
 .background-card h4:not(:first-child) {
   margin-top: 2em;
 }
-h4 > .fa,
+h4 > .fa .fa-brands .fa-solid,
 h4 > .title {
   display: inline-block;
   vertical-align: baseline;
 }
-h4 > .fa {
+h4 > .fa .fa-brands .fa-solid {
   width: 4rem;
 }
 .content {
@@ -222,7 +226,6 @@ h4 > .fa {
   .contact-details,
   .profile-pic {
     display: block;
-    text-align: center;
   }
   .card-nested {
     padding-left: 0;
@@ -292,7 +295,7 @@ h4 > .fa {
     margin-bottom: 0.5em;
     margin-top: 1em !important;
   }
-  h4 > .fa {
+  h4 > .fa .fa-brands .fa-solid {
     display: none !important;
   }
   .card-nested {
@@ -469,7 +472,7 @@ h4 > .fa {
                         <i class="fa fa-lg fa-map-marker"></i>
                       </span>
 
-                        <span class="info">
+                        <span class="info" style="margin-left: 4px;">
                           Utrecht, The Netherlands
                         </span>
                     </div>
@@ -483,19 +486,23 @@ h4 > .fa {
 
             <div class="social-links-offline">
                 <a class="social-link-offline" href="https://mhaseebtariq.com" target="_blank">
-                  <span class="fa fa-globe fa-2x"></span><span class="social-link-text">https://mhaseebtariq.com</span>
+                  <span class="fa-solid fa-globe fa-2x"></span><span class="social-link-text">https://mhaseebtariq.com</span>
                 </a>
                 <a class="social-link-offline"
                    href="https://scholar.google.com/citations?user=XJDrx_EAAAAJ&hl=en" target="_blank">
-                  <span class="fa fa-graduation-cap fa-2x" style="margin-right: 4px !important; font-size: 1.8em !important;"></span><span class="social-link-text">https://scholar.google.com/citations?user=XJDrx_EAAAAJ&hl=en</span>
+                  <span class="fa-brands fa-google-scholar fa-2x"></span><span class="social-link-text">https://research.mhaseebtariq.com</span>
                 </a>
                <a class="social-link-offline"
                    href="https://github.com/mhaseebtariq" target="_blank">
-                  <span class="fa fa-github fa-2x"></span><span class="social-link-text">https://github.com/mhaseebtariq</span>
+                  <span class="fa-brands fa-github fa-2x"></span><span class="social-link-text">https://github.mhaseebtariq.com</span>
                 </a>
                 <a class="social-link-offline"
-                   href="https://nl.linkedin.com/in/muhammad-haseeb-tariq-3b817260" target="_blank">
-                  <span class="fa fa-linkedin fa-2x"></span><span class="social-link-text">https://nl.linkedin.com/in/muhammad-haseeb-tariq-3b817260</span>
+                   href="https://linkedin.com/in/muhammad-haseeb-tariq-3b817260" target="_blank">
+                  <span class="fa-brands fa-linkedin fa-2x"></span><span class="social-link-text">https://linkedin.mhaseebtariq.com</span>
+                </a>
+                <a class="social-link-offline"
+                   href="https://medium.com/@mhaseebtariq" target="_blank">
+                  <span class="fa-brands fa-medium fa-2x"></span><span class="social-link-text">https://blogs.mhaseebtariq.com</span>
                 </a>
 
             </div>     
