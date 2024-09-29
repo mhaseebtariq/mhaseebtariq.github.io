@@ -8,7 +8,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/mhaseebtariq/mhaseebtariq.github.io/main/favicon.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,500,600,700|Open+Sans:400,500,600,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,500,600,700|Open+Sans:400,500,600,700" rel="stylesheet" type="text/css">
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
 
@@ -161,7 +161,7 @@ body {
 .social-link:focus {
   text-decoration: none;
 }
-.social-link .fa {
+.social-link .fa .fa-brands .fa-solid {
   width: 2em;
 }
 .social-link-offline {
@@ -171,7 +171,7 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
-.social-link-offline .fa {
+.social-link-offline .fa .fa-brands .fa-solid {
   margin-right: 13px;
 }
 
@@ -186,12 +186,12 @@ body {
 .background-card h4:not(:first-child) {
   margin-top: 2em;
 }
-h4 > .fa,
+h4 > .fa .fa-brands .fa-solid,
 h4 > .title {
   display: inline-block;
   vertical-align: baseline;
 }
-h4 > .fa {
+h4 > .fa .fa-brands .fa-solid {
   width: 4rem;
 }
 .content {
@@ -292,7 +292,7 @@ h4 > .fa {
     margin-bottom: 0.5em;
     margin-top: 1em !important;
   }
-  h4 > .fa {
+  h4 > .fa .fa-brands .fa-solid {
     display: none !important;
   }
   .card-nested {
@@ -484,7 +484,7 @@ h4 > .fa {
             <div class="social-links">
 
                 <a class="social-link" href="https://scholar.google.com/citations?user=XJDrx_EAAAAJ&hl=en" target="_blank">
-                  <span class="tippy fa fa-graduation-cap fa-2x" data-tippy-content="Google Scholar"></span>
+                  <span class="tippy fa-brands fa-google-scholar fa-2x" data-tippy-content="Google Scholar"></span>
                 </a>
                 <a class="social-link"
                    href="https://github.com/mhaseebtariq" target="_blank">
@@ -498,10 +498,10 @@ h4 > .fa {
                   <span class="tippy fa-brands fa-medium fa-2x" data-tippy-content="Blogs"></span>
                 </a>
                 <a class="social-link" href="offline.html" target="_blank">
-                  <span class="tippy fa fa-print fa-2x" data-tippy-content="Print Version"></span>
+                  <span class="tippy fa-solid fa-print fa-2x" data-tippy-content="Print Version"></span>
                 </a>
                 <a class="social-link" href="CV-MHT.pdf">
-                  <span class="tippy fa fa-file-pdf-o fa-2x" data-tippy-content="Download PDF"></span>
+                  <span class="tippy fa-solid fa-file-pdf fa-2x" data-tippy-content="Download PDF"></span>
                 </a>
 
             </div>
